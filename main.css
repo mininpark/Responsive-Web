@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Bentham&family=Libre+Baskerville:ital@1&family=PT+Serif:ital@0;1&display=swap');
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+/*html을 하면서 메뉴를 만들때 float을 사용하면 그 위에 부모의 height값이 0이 된다. 왜냐하면 죄다 left로 해버리기 때문에 height값을 읽을수가 없다.
+그래서 영역이 깨져서 위로 올라가는 경우가 생기는데 height의 값을 다시 받기 위한 방법 clearfix:after */
+.img {
+    vertical-align: top;
+}
+
+/* Typography LOGO: Bentham Regular, H2: Bentham Reg, Baskerville Italic, H3: PT serif, Main, Footer: PT serif --> import top
+    font-family: 'Bentham', serif;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'PT Serif', serif;
+*/
+
+@media only screen and (max-width: 670px) {
+    header {
+      width: 670px;
+    }
+  }
+body{
+    font-size: 18px;
+    font-family: 'PT Serif', serif;
+    color: #6f6f6f;
+    line-height: 34px;
+}
+
+h1, h2 {
+    font-family: 'Bentham', serif;
+}
+h3 {
+    font-family: 'PT Serif', serif;  
+}
+/* Layout: all layouts of pages to change */
+.content {width: 640px; margin:0 auto; padding: 100px 0;}
+
+/* Header */
+header{
+    height: 600px;
+    background: url(../images/mainpage.jpg) no-repeat center top / cover;
+    /*cover: full heigth, reponsive width*/
+    text-align: center;
+    color: #fff;
+    padding-top: 60px;
+    box-sizing: border-box;
+}
+header h1{
+    border: 1px solid #fff;
+    display: inline-block;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0 20px; /*each padding-left and right 20px*/
+    line-height: 51px;
+}
+header h2{
+    font-size: 50px;   
+    line-height: 72px;
+    width: 670px;
+    margin: 124px auto 13px;
+}
+header h2 span{
+    font-family: 'Libre Baskerville', serif;
+    font-style: italic;
+    }
+header p{
+   font-size: 20px;
+   font-style:italic; 
+}
+
+/* MainContent */
+.content h2{
+    font-size: 42px;
+    line-height: 49px;
+    color: #444;
+    letter-spacing: 0.08em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.content h3{
+    font-size: 14px;
+    color:#444;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.08em;
+    line-height: 14px;
+    margin: 25px 0 50px;
+}
+
+.content p{
+    margin-bottom: 34px;
+}
+.content p em{
+    color: #e3514e;
+}
+.content p:last-of-type{ /*the last child of paragraphs */
+    margin: 0 0 50px;
+}
+.content ul{
+    border:1px solid #838383;
+    border-right: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction:row;
+    list-style: none;
+}
+.content ul li {
+    border-right: 1px solid #838383;
+    text-align: center;
+    line-height: 52px;
+}
+
+/* Footer */
